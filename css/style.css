@@ -69,8 +69,9 @@ body {
   border: 2px var(--font-color-light) solid;
   transform: translate(-50%, -50%);
   transition: scale 0.5s ease;
-  z-index: -1;
+  z-index: 10;
   display: none;
+  pointer-events: none;
 }
 
 .cursor-calm-down {
@@ -84,7 +85,8 @@ body {
   border-radius: 50%;
   position: fixed;
   border: 2px var(--font-color) solid;
-  z-index: -1;
+  z-index: 10;
+  pointer-events: none;
   transform: translate(-50%, -50%);
   display: none;
 }
@@ -97,7 +99,7 @@ body {
   z-index: -2;
   font-weight: 800;
   color: var(--font-color);
-  opacity: 0.02;
+  opacity: 0.05;
 }
 
 nav.nav-large-screen {
@@ -137,7 +139,7 @@ nav.nav-large-screen .nav-item-list-large i {
 
 nav.nav-mobile {
   background-color: var(--bg-color);
-  z-index: 100;
+  z-index: 15;
   position: fixed;
   top: 0;
   left: 0;
@@ -725,10 +727,18 @@ section.about-me .container .profile-pic {
   height: 400px;
   width: min(303.3px, 100%);
   margin-inline: auto;
+  transform: perspective(1500px) rotateY(15deg);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 1s ease 0s;
 }
 section.about-me .container .profile-pic img {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
+}
+section.about-me .container .profile-pic:hover {
+  transform: perspective(3000px) rotateY(5deg);
 }
 section.about-me .container .about-me-content-container > h3 {
   margin: 20px 0;
