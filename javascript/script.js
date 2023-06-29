@@ -161,16 +161,11 @@ function loadIndependentPageEvents() {
 }
 function loadJavascriptForIndexPage(){
 // Redirecting to about page on clicking more about me and adding calm down animation
-    document.querySelector('.about-me').addEventListener('click' , e => {
-    window.location.href = '/about.html'
-})
+
 }
 
 function loadJavascriptForContactPage() {
-// Redirecting to home page 
-    document.querySelector('.go-back-to-home').addEventListener('click' , e => {
-    window.location.href = '/index.html'
-})
+
 }
 
 function loadJavascriptForArticlesPage(){

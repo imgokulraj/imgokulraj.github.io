@@ -18,6 +18,7 @@
     --nav-filter-btn-active-color : #343a40 ;
     --sidebar-projects-btn-color2 : #3f566e ;
     --sidebar-projects-btn-color1:#13283e;
+    --timeline-color : #ffffff5e;
 }
 
 
@@ -209,32 +210,7 @@ section.home-content {
     }
       
     }
-    .about-me { 
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: flex-start;
-        display: flex;
-        line-height: 35px;
-        font-size: 0.72rem;
-        font-family: var(--font-family-para);
-        width: max-content;
-        cursor: pointer;
-        margin-bottom: 10px !important;
-        p{
-            font-size: 0.72rem;
-            font-weight: bold;
-        }
- 
-        i { 
 
-            animation-name: movearrow;
-            animation-duration: 1.5s;
-            animation-timing-function:ease-in-out;
-            animation-iteration-count: infinite;
-            color: var(--water-animation-bg-color);
-        }
-    }
     
     // Animation for all its child 
     > :nth-child(1) {
@@ -262,6 +238,33 @@ section.home-content {
         animation-fill-mode: forwards;
     }
 
+}
+a.about-me { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    line-height: 35px;
+    font-size: 0.72rem;
+    font-family: var(--font-family-para);
+    width: max-content;
+    cursor: pointer;
+    margin-bottom: 10px !important;
+    p{
+        font-size: 0.72rem;
+
+        color: var(--font-color);
+    }
+
+    i { 
+
+        animation-name: movearrow;
+        animation-duration: 1.5s;
+        animation-timing-function:ease-in-out;
+        animation-iteration-count: infinite;
+        color: var(--font-color) ;
+    }
 }
 // Water animation class 
 .water-animation { 
@@ -530,7 +533,9 @@ section.articles-section {
     margin-top: 70px;
     padding: 20px;
     
-
+    .container{
+        margin-bottom: 20px;
+    }
     .nav-filter { 
         margin-top: 50px;
         display: flex;
@@ -766,6 +771,72 @@ section.articles-section {
 }
 .cover-whole-page-modal-active{
     display: block;
+}
+
+
+// Styling the about me page 
+section.about-me {
+    .container{
+        
+        width: min(100% , 900px);
+        margin-inline: auto;
+        .profile-pic {
+            margin: 20px 0;
+            height: 400px;
+            width: min(303.3px , 100%);
+            margin-inline: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+       .about-me-content-container{
+         > h3{
+            margin: 20px 0;
+        }
+        ul{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+           border-left: 2px solid var(--timeline-color);
+            li{
+                
+
+                position: relative;
+                padding-left: 23px;
+                display: flex;
+                flex-direction: column;
+            
+                margin-bottom: 18px;
+               font-family: var(--font-family-para);
+                h5{
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    opacity: 0.9;
+
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: var(--font-size-small);
+                }
+                .round{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 17px;
+                    height: 17px;
+                    background-color: var(--bg-color);
+                    transform: translateX(-50%);
+                    border: 1.5px solid var(--font-color);
+                    border-radius: 50%;
+                }
+
+            }
+        }
+       }
+    }
 }
 
 // animations list 
