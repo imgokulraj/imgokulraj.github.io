@@ -3,26 +3,8 @@
 
 
 :root {
-    --bg-color : #020a13 ; 
-    --bg-br-color : #0f0f0f ;
-    --font-color : #fff ;
-    --font-color-light : #8f87876e ;
-    --font-family-heading : 'Barlow Condensed', sans-serif;
-    --font-family-para : 'Montserrat', sans-serif;
-    --water-animation-bg-color : #03a9f4 ; 
-    --water-animation-border-color : #03a9f4; 
-    --bg-cover-gradient : linear-gradient(to bottom right, rgba(255,255,255,1) , rgb(38, 35, 70) , rgba(255,255,255,1)) ;
-    --footer-bg-color : #020a13;
-    --font-size-small : 0.72rem;
-    --name-animation-color : rgb(255 , 105 , 180)  ;
-    --nav-filter-btn-active-color : #343a40 ;
-    --sidebar-projects-btn-color2 : #3f566e ;
-    --nav-filter-btn-active-font-color : #fff ;
-    --sidebar-projects-btn-color1:#13283e;
-    --timeline-color : #ffffff5e;
-    --common-font-color : #fff ;
-}
-.toggle-mode {
+
+    //
     --bg-color : #fffdfc; 
     --common-font-color : #fff ;
     --bg-br-color : #edf2f7 ;
@@ -41,6 +23,26 @@
     --sidebar-projects-btn-color2 : #000;
     --sidebar-projects-btn-color1:#efe9e4;
     --timeline-color : rgba(0 , 0 , 0 , 0.6);
+}
+.toggle-mode {
+    --bg-color : #020a13 ; 
+    --bg-br-color : #0f0f0f ;
+    --font-color : #fff ;
+    --font-color-light : #8f87876e ;
+    --font-family-heading : 'Barlow Condensed', sans-serif;
+    --font-family-para : 'Montserrat', sans-serif;
+    --water-animation-bg-color : #03a9f4 ; 
+    --water-animation-border-color : #03a9f4; 
+    --bg-cover-gradient : linear-gradient(to bottom right, rgba(255,255,255,1) , rgb(38, 35, 70) , rgba(255,255,255,1)) ;
+    --footer-bg-color : #020a13;
+    --font-size-small : 0.72rem;
+    --name-animation-color : rgb(255 , 105 , 180)  ;
+    --nav-filter-btn-active-color : #343a40 ;
+    --sidebar-projects-btn-color2 : #3f566e ;
+    --nav-filter-btn-active-font-color : #fff ;
+    --sidebar-projects-btn-color1:#13283e;
+    --timeline-color : #ffffff5e;
+    --common-font-color : #fff ;
 }
 
 
@@ -804,7 +806,7 @@ section.articles-section {
 // Styling the about me page 
 section.about-me {
     .container{
-        
+        padding: 20px;
         width: min(100% , 900px);
         margin-inline: auto;
         .profile-pic {

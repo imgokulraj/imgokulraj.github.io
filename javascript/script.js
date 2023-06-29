@@ -1,7 +1,7 @@
 const swup = new Swup();
 let currentPageName = null
 // getting theme from localstorage 
-if (localStorage.getItem('currenttheme') === "light"){
+if (localStorage.getItem('currenttheme') === "dark"){
         console.log('hi')
         toggleTheme()
 }
@@ -167,7 +167,7 @@ function toggleTheme(e) {
     const root = document.documentElement
     root.classList.toggle('toggle-mode')
     if (root.classList.contains('toggle-mode')){
-        localStorage.setItem("currenttheme" , "light")
+        localStorage.setItem("currenttheme" , "dark")
     }else {
         localStorage.removeItem("currenttheme")
     }
