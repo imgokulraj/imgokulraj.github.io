@@ -14,8 +14,31 @@
   --name-animation-color: rgb(255 , 105 , 180) ;
   --nav-filter-btn-active-color: #343a40 ;
   --sidebar-projects-btn-color2: #3f566e ;
+  --nav-filter-btn-active-font-color: #fff ;
   --sidebar-projects-btn-color1:#13283e;
   --timeline-color: #ffffff5e;
+  --common-font-color: #fff ;
+}
+
+.toggle-mode {
+  --bg-color: #fffdfc;
+  --common-font-color: #fff ;
+  --bg-br-color: #edf2f7 ;
+  --font-color: #000 ;
+  --font-color-light: #545454;
+  --font-family-heading: "Barlow Condensed", sans-serif;
+  --font-family-para: "Montserrat", sans-serif;
+  --water-animation-bg-color: #03a9f4 ;
+  --water-animation-border-color: #03a9f4;
+  --bg-cover-gradient: linear-gradient(to bottom right, rgba(255,255,255,1) , rgb(38, 35, 70) , rgba(255,255,255,1)) ;
+  --footer-bg-color: #fff;
+  --font-size-small: 0.72rem;
+  --name-animation-color: rgb(255 , 105 , 180) ;
+  --nav-filter-btn-active-color: #343a40 ;
+  --nav-filter-btn-active-font-color: #fff ;
+  --sidebar-projects-btn-color2: #000;
+  --sidebar-projects-btn-color1:#efe9e4;
+  --timeline-color: rgba(0 , 0 , 0 , 0.6);
 }
 
 * {
@@ -96,6 +119,8 @@ nav.nav-large-screen i {
 nav.nav-large-screen .nav-item-list-large {
   display: none;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 nav.nav-large-screen .nav-item-list-large a {
   color: var(--font-color);
@@ -105,6 +130,9 @@ nav.nav-large-screen .nav-item-list-large a {
 }
 nav.nav-large-screen .nav-item-list-large a:hover {
   transform: scale(1.1);
+}
+nav.nav-large-screen .nav-item-list-large i {
+  font-size: 1.5rem;
 }
 
 nav.nav-mobile {
@@ -460,6 +488,7 @@ section.contact-form form .go-back-to-home i {
   border: 2px solid var(--font-color);
   transform: scale(1.2);
   font-weight: bold;
+  color: var(--nav-filter-btn-active-font-color);
 }
 
 section.articles-section {
@@ -522,11 +551,11 @@ section.articles-section .articles-list li .article-list-content {
 }
 section.articles-section .articles-list li .article-list-content h4 {
   font-size: 1.2rem;
-  color: var(--font-color);
+  color: var(--common-font-color);
 }
 section.articles-section .articles-list li .article-list-content p {
   font-size: var(--font-size-small);
-  color: var(--font-color);
+  color: var(--common-font-color);
 }
 section.articles-section .articles-list li::after {
   content: "";
@@ -641,6 +670,7 @@ section.articles-section .articles-list li::after {
   background: var(--sidebar-projects-btn-color1);
   font-size: var(--font-size-small);
   color: var(--font-color);
+  font-weight: bold;
   padding: 5px 10px;
 }
 .project-details-modal .github {
@@ -656,7 +686,7 @@ section.articles-section .articles-list li::after {
   padding: 10px 20px;
   width: 100%;
   background: var(--sidebar-projects-btn-color2);
-  color: var(--font-color) !important;
+  color: #fff !important;
   font-size: var(--font-size-small);
   display: flex;
   justify-content: center;

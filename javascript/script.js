@@ -1,5 +1,11 @@
 const swup = new Swup();
 let currentPageName = null
+// getting theme from localstorage 
+if (localStorage.getItem('currenttheme') === "light"){
+        console.log('hi')
+        toggleTheme()
+}
+
 const articles = [
     {
         "img" : "/images/traversy.webp" , 
@@ -149,8 +155,22 @@ document.querySelectorAll('a').forEach(aTag => {
     })
 
 })
+// Changing background 
 
+document.querySelectorAll('.change-bg').forEach(item => {
+    item.addEventListener('click' , toggleTheme)
+})
 loadIndependentPageEvents() 
+}
+// Function to toggle theme
+function toggleTheme(e) {
+    const root = document.documentElement
+    root.classList.toggle('toggle-mode')
+    if (root.classList.contains('toggle-mode')){
+        localStorage.setItem("currenttheme" , "light")
+    }else {
+        localStorage.removeItem("currenttheme")
+    }
 }
 function loadIndependentPageEvents() {
     currentPageName = getCurrentPageName()
